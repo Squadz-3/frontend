@@ -5,11 +5,11 @@ import Squadz from "../../components/Template/Squadz";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Discover({ data }) {
+export default function Discover() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [desc, setDesc] = useState("");
-  const [value, setValue] = useState(data);
+  const [value, setValue] = useState();
   const [sort, setSort] = useState("hot");
   const [gate, setGate] = useState("");
 
@@ -189,11 +189,12 @@ export default function Discover({ data }) {
         <div>
           <h2 className={style.subText}>Hot Squadz</h2>
           <h4 className={style.underText}>
-            Displaying <i>{value.hot?.length < 10 ? value.hot?.length : 10}</i>{" "}
-            out of <i>{value.hot?.length}</i> results
+            Displaying{" "}
+            <i>{value?.hot?.length < 10 ? value?.hot?.length : 10}</i> out of{" "}
+            <i>{value?.hot?.length}</i> results
           </h4>
           {value != null &&
-            value.hot?.slice(0, 10).map(function (value) {
+            value?.hot?.slice(0, 10).map(function (value) {
               return <Squadz value={value} key={value._id}></Squadz>;
             })}
         </div>
@@ -250,7 +251,7 @@ export default function Discover({ data }) {
     </>
   );
 }
-
+/*
 export async function getServerSideProps({ query }) {
   const search = query.search;
   const desc = query.desc;
@@ -282,4 +283,4 @@ export async function getServerSideProps({ query }) {
   } else {
     return { props: {} };
   }
-}
+}*/
