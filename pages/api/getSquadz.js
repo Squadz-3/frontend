@@ -9,14 +9,16 @@ export default async function handler(req, res) {
     .find({ _id: user }, { communityList: 1 })
     .toArray();
   const communityList = response[0].communityList;
-
-  const result = await db
-    .collection("_squadz")
-    .find(
-      { _id: { $in: communityList } },
-      { name: true, description: true, profile: true }
-    )
-    .toArray();
-
-  res.status(200).send(result);
+  if (communityList) {
+    const result = await db
+      .collection("_squadz")
+      .find(
+        { _id: { $in: communityList } },
+        { name: true, description: true, profile: true }
+      )
+      .toArray();
+    res.status(200).send(result);
+  } else {
+    res.status(201).send();
+  }
 }

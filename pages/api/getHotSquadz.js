@@ -6,8 +6,9 @@ export default async function handler(req, res) {
   let options = {};
 
   const body = req.body;
+  const { searchTerm, desc, gate, sort } = body;
 
-  if (body.searchTerm) {
+  if (searchTerm) {
     options = {
       $match: {
         name: { $regex: body.searchTerm, $options: "i" },
@@ -15,18 +16,18 @@ export default async function handler(req, res) {
     };
     query.push(options);
   }
-  if (body.desc) {
+  if (desc) {
     options = {
       $match: {
-        description: { $regex: body.desc, $options: "i" },
+        description: { $regex: desc, $options: "i" },
       },
     };
     query.push(options);
   }
-  if (body.gate) {
+  if (gate) {
     options = {
       $match: {
-        gatingDetails: { $regex: body.gate, $options: "i" },
+        gatingDetails: { $regex: gate, $options: "i" },
       },
     };
     query.push(options);
@@ -48,7 +49,7 @@ export default async function handler(req, res) {
       },
     },
   });
-  if (body.sort == "latest") {
+  if (sort == "latest") {
     query.push({ $sort: { timestamp: -1 } }, { $limit: 10 });
   } else {
     query.push({ $sort: { hot: -1, timestamp: -1 } }, { $limit: 10 });
@@ -56,10 +57,14 @@ export default async function handler(req, res) {
   try {
     const hot = await db.collection("_squadz").aggregate(query).toArray();
 
-    const final = {
-      hot: hot,
-    };
-    res.status(200).send(final);
+    if (hot) {
+      const final = {
+        hot: hot,
+      };
+      res.status(200).send(final);
+    } else {
+      res.status(200).send({});
+    }
   } catch (error) {
     res.status(200).send(error);
   }

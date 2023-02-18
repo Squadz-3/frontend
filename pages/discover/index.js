@@ -251,7 +251,7 @@ export default function Discover({ data }) {
   );
 }
 
-export async function getServerSideProps({ query, res }) {
+export async function getServerSideProps({ query }) {
   const search = query.search;
   const desc = query.desc;
   const sort = query.sort;
@@ -269,7 +269,10 @@ export async function getServerSideProps({ query, res }) {
   };
   const response = await fetch(`${server}/api/getHotSquadz`, {
     method: "POST",
-    body: body,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
   });
 
   const data = await response.json();

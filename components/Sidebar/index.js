@@ -24,8 +24,10 @@ export default function SideBar() {
         },
       }
     ).then(async (res) => {
-      const data = await res.json();
-      setCommunity(data);
+      if (res.status == 200) {
+        const data = await res.json();
+        setCommunity(data);
+      }
     });
   }
 
