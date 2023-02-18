@@ -55,6 +55,7 @@ export default async function handler(req, res) {
   }
 
   const hot = await db.collection("_squadz").aggregate(query).toArray();
+
   const final = {
     hot: hot,
   };

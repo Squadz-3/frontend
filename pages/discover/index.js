@@ -274,10 +274,6 @@ export async function getServerSideProps({ query, res }) {
   };
   const response = await fetch(`${server}/api/getHotSquadz`, {
     method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json charset=UTF-8",
-    },
     body: JSON.stringify(body),
   });
 
