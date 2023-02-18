@@ -10,8 +10,6 @@ export default function SideBar() {
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("SquadData"))) {
       getCommunityList();
-    } else {
-      return null;
     }
   }, []);
 

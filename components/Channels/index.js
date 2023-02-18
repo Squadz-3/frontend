@@ -5,12 +5,6 @@ import { modalContext } from "../../contexts/modalProvider";
 import { useRouter } from "next/router";
 import Image from "next/image";
 export default function Channels() {
-  useEffect(() => {
-    if (!JSON.parse(localStorage.getItem("SquadData"))) {
-      return null;
-    }
-  }, []);
-
   const { squadValue, communityList } = useContext(squadContext);
   const {
     createCategory,

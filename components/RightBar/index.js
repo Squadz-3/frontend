@@ -15,8 +15,6 @@ export default function RightBar() {
         getMembers(value.admins, "admin");
         getMembers(value.members, "member");
       }
-    } else {
-      return null;
     }
   }, [value]);
 

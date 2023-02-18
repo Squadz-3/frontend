@@ -74,7 +74,7 @@ export default function Discover({ data }) {
     };
     window.addEventListener("beforeinstallprompt", handler);
 
-    return () => window.removeEventListener("transitionend", handler);
+    window.removeEventListener("transitionend", handler);
   }, []);
 
   function downloadPWA() {
@@ -264,7 +264,7 @@ export async function getServerSideProps({ query, res }) {
 
   const dev = process.env.NODE_ENV !== "production";
 
-  const server = dev ? "http://localhost:3000" : "https://squadz.in";
+  const server = dev ? "https://squadz.in" : "https://squadz.in";
   // Fetch data from external API
   const body = {
     searchTerm: search,

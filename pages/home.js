@@ -20,7 +20,7 @@ export default function Home() {
     };
     window.addEventListener("beforeinstallprompt", handler);
 
-    return () => window.removeEventListener("transitionend", handler);
+    window.removeEventListener("transitionend", handler);
   }, []);
 
   function downloadPWA() {
