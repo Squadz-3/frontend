@@ -1,0 +1,49 @@
+.navItem {
+  height: 3rem;
+  display: block;
+  width: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+  border-radius: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navItem:hover {
+  border-radius: 0.75rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.navName {
+  position: absolute;
+  width: auto;
+  z-index: 7;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  min-width: max-content;
+  left: 3.7rem;
+  margin-top: 1rem;
+  color: var(--always-white-color);
+  background-color: var(--background-primary-color);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: var(--text-primary-color);
+  transition: all 100ms;
+  transform: scale(0);
+  transform-origin: left;
+}
+.container {
+  display: flex;
+}
+.container:hover > span {
+  transform: scale(1);
+}
+.navName:hover {
+  transform: scale(1);
+}
+@media all and (max-width: 600px) {
+  .navItem {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}

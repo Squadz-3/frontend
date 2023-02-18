@@ -1,0 +1,103 @@
+/* ===== Title ===== */
+.title {
+  font-family: var(--text-header-font);
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+.container ul {
+  padding: 5px;
+  list-style: none;
+}
+.horizontal {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* ===== Web Three Login ===== */
+.webthree li {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  font-family: var(--text-primary-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  user-select: none;
+}
+.container ul li img {
+  margin-right: 5px;
+}
+.webthree li:first-child {
+  background-color: var(--theme-deso-color);
+}
+.webthree li:nth-child(2) {
+  background-color: var(--theme-metamask-color);
+}
+.webthree li:nth-child(3) {
+  background-color: var(--theme-phantom-color);
+}
+/* ===== Web Two login ===== */
+.webtwo {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.webtwo li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  font-family: var(--text-primary-font);
+  margin-left: 10px;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.webtwo li:first-child {
+  background-color: var(--theme-google-color);
+  color: var(--always-black-color);
+}
+.webtwo li:nth-child(2) {
+  background-color: var(--theme-microsoft-color);
+  color: var(--always-black-color);
+}
+.unActive {
+  pointer-events: none;
+  user-select: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: var(--always-black-color);
+  opacity: 0.4;
+}
+
+/* ===== Go to sign up ===== */
+.goToSignup {
+  text-align: center;
+  font-family: var(--text-primary-font);
+  font-size: 15px;
+  margin-top: 10px;
+}
+.goToSignup a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--text-link-color);
+}
+/* ===== Error ===== */
+.error{
+  text-align: center;
+  color: var(--text-negative-color);
+  margin-top: 10px;
+  max-width: 300px;
+}
+@media all and (max-width: 800px) {
+  .webthree li {
+    width: 250px;
+  }
+  .webtwo {
+    grid-template-columns: 100%;
+    width: 250px;
+  }
+}

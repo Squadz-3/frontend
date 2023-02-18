@@ -1,0 +1,56 @@
+/* ===== Title ===== */
+.title {
+  font-family: var(--text-header-font);
+
+  letter-spacing: 0.3rem;
+}
+.container {
+  margin-top: 15px;
+  position: relative;
+  min-width: 500px;
+}
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+}
+.profile {
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: top;
+  position: relative;
+  top: 170px;
+  left: 20px;
+}
+.desc {
+  font-size: 15px;
+  margin-top: 5px;
+  height: fit-content;
+  max-height: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.textContainer {
+  margin-top: 180px;
+}
+.joinContainer {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.joinContainer button {
+  background-color: var(--button-color);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.error {
+  font-family: var(--text-primary-font);
+  color: var(--text-negative-color);
+  text-align: center;
+}

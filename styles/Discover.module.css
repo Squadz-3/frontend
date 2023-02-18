@@ -1,0 +1,300 @@
+/* ===== Discover ===== */
+
+.banner {
+  width: 100%;
+  height: 70vh;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-color: var(--background-home-color);
+  background-image: url("/assets/svgs/vector.svg");
+  position: relative;
+}
+.title {
+  font-family: var(--text-header-font);
+  position: absolute;
+  letter-spacing: 1rem;
+  font-size: 5.5rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search {
+  width: 45vw;
+  height: 7.3vh;
+  border-radius: 15px;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+.search input {
+  width: 100%;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  line-height: 16px;
+  font-size: 16px;
+}
+.searchBtn {
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--accent-color);
+  user-select: none;
+  transition: 0.5s ease;
+}
+.searchBtn:hover {
+  background-color: var(--button-hover-color);
+}
+.subText {
+  font-family: var(--text-header-font);
+  letter-spacing: 0.4rem;
+  font-size: 2.5rem;
+  width: fit-content;
+  margin-top: 25px;
+}
+.subText::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--accent-color);
+  display: block;
+  margin: auto;
+}
+.underText {
+  font-family: var(--text-primary-font);
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* ========= Slogan ========= */
+.slogan {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 0px;
+  text-align: center;
+  background-color: var(--accent-color);
+  margin-top: 15vh;
+}
+.slogan h1 {
+  font-family: var(--text-header-font);
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+/* ===== Filter ===== */
+.filter {
+  margin-top: 20px;
+}
+.filter button {
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  background-color: var(--accent-color);
+  margin-top: 15px;
+}
+.filter textarea {
+  resize: none;
+  margin-top: 10px;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-family: var(--text-primary-font);
+  border-radius: 5px;
+}
+.filter p {
+  font-family: var(--text-primary-font);
+  font-size: 1.2rem;
+  margin-top: 5px;
+  width: fit-content;
+}
+.filter ul {
+  list-style: none;
+}
+.filter ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.filter ul li:hover {
+  margin-left: 5px;
+  color: var(--accent-color);
+}
+.activeList {
+  margin-left: 5px;
+  color: var(--accent-color);
+}
+.filter input {
+  height: 25px;
+  outline: none;
+  width: 50px;
+  margin-top: 5px;
+}
+/* ========= Download ========= */
+.download {
+  width: 100%;
+
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.downloadLeft {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  padding-left: 70px;
+}
+.downloadRight {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 70px;
+  margin-bottom: 15vh;
+  margin-top: 15vh;
+}
+.downloadLeft h1 {
+  font-family: var(--text-header-font);
+  font-size: 3rem;
+}
+.downloadLeft p {
+  font-family: var(--text-primary-font);
+  font-size: 1.2rem;
+}
+
+.downloadRight button {
+  background-color: var(--accent-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-family: var(--text-primary-font);
+  font-size: 15px;
+}
+/* ========= Footer ========= */
+.footer {
+  display: grid;
+  background-color: var(--header-background-color);
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 20px;
+
+  margin-top: 5vh;
+}
+
+.footer div ul {
+  list-style: none;
+}
+.footer div h2 {
+  font-family: var(--text-header-font);
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+.footer div h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--accent-color);
+  height: 2px;
+  width: 50px;
+}
+.footer div ul li {
+  font-family: var(--text-primary-font);
+  margin-top: 15px;
+  color: var(--text-muted-color);
+  cursor: pointer;
+  transition: 1s ease;
+}
+.footer div ul li:hover {
+  color: var(--always-white-color);
+  padding-left: 10px;
+}
+.footer div ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+/* ========= Media Queries ========= */
+
+/* Medium sized devices (Large Tablets) */
+@media all and (max-width: 1026px) {
+  .hero .left {
+    text-align: left;
+    margin-left: 20px;
+    padding-right: 10px;
+  }
+  .hero .left h1 {
+    font-size: 6.4rem;
+    line-height: 6.3rem;
+  }
+  .hero .left h4 {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    padding-left: 0px;
+  }
+  .hero .left button {
+    margin-top: 20px;
+  }
+  .hero .right img {
+    width: 450px;
+    height: 300px;
+  }
+  .vector {
+    height: 100%;
+  }
+  .features {
+    margin-top: 25vh;
+  }
+}
+@media all and (max-width: 800px) {
+  .container {
+    grid-template-columns: 100%;
+  }
+  .filter {
+    text-align: center;
+  }
+  .filter p {
+    width: 100%;
+  }
+  .underText {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .subText {
+    width: 100%;
+    text-align: center;
+  }
+  .download {
+    grid-template-columns: 100%;
+  }
+  .downloadLeft {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .downloadRight {
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0px;
+  }
+
+  .footer {
+    grid-template-columns: 100%;
+  }
+  .footer div {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .footer div h2::before {
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

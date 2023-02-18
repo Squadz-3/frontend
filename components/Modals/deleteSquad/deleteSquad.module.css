@@ -1,0 +1,45 @@
+/* ===== Title ===== */
+.title {
+  font-family: var(--text-header-font);
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+.desc {
+  text-align: center;
+  font-family: var(--text-primary-font);
+  width: 500px;
+}
+.name {
+  text-align: center;
+  color: var(--text-negative-color);
+  font-size: 1.4rem;
+  font-family: var(--text-primary-font);
+}
+.input {
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  height: 6vh;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 1px solid var(--always-white-color);
+  font-family: var(--text-primary-font);
+  transition: 0.2s ease;
+}
+.input:focus {
+  border: 1px solid var(--accent-color);
+}
+.button {
+  background-color: var(--button-unavailable-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  color: var(--always-white-color);
+  padding: var(--button-padding);
+  cursor: not-allowed;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  user-select: none;
+}

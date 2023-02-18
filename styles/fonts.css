@@ -1,0 +1,28 @@
+/* bebas-neue-regular - latin */
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Bebas Neue"),
+    /* IE6-IE8 */
+      url("/assets/fonts/BebasNeue/bebas-neue-v9-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/BebasNeue/bebas-neue-v9-latin-regular.woff")
+      format("woff");
+}
+/* atkinson-hyperlegible-regular - latin */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Atkinson Hyperlegible"),
+    /* IE6-IE8 */
+      url("/assets/fonts/AtkinsonHyperlegible/atkinson-hyperlegible-v10-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("/assets/fonts/AtkinsonHyperlegible/atkinson-hyperlegible-v10-latin-regular.woff")
+      format("woff");
+}

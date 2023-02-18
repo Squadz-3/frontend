@@ -1,18 +1,96 @@
+:root {
+  --accent-color: #ff007a;
+  --second-accent-color: #fb00ff;
+
+  --positive-color: green;
+  --neutral-color: yellow;
+  --negative-color: rgb(217, 62, 62);
+
+  --entry-free-color: lightgreen;
+  --entry-nft-color: purple;
+  --entry-dao-color: white;
+
+  --text-primary-color: white;
+  --text-muted-color: grey;
+  --text-link-color: lightblue;
+  --text-positive-color: green;
+  --text-negative-color: rgb(217, 62, 62);
+  --text-header-font: "Bebas Neue", "sans-serif";
+  --text-primary-font: "Atkinson Hyperlegible", "sans-serif";
+
+  --background-home-color: #080a14;
+  --background-primary-color: #36393f;
+  --background-secondary-color: #2f3136;
+  --background-tertiary-color: #1f1f20;
+
+  --button-color: rgb(48, 52, 69);
+  --button-hover-color: rgb(60, 48, 69);
+  --button-unavailable-color: rgba(48, 52, 69, 0.656);
+  --button-border-radius: 20px;
+  --button-padding: 12px 32px;
+
+  --input-field-background: #40444b;
+  --input-field-border: black;
+
+  --header-background-color: black;
+  --header-height: 11vh;
+  --header-padding: 2rem;
+  --header-item-padding: 1.7rem;
+
+  --popup-background-color: rgb(68, 64, 64);
+  --popup-overlay-color: rgba(0, 0, 0, 0.7);
+  --popup-border-radius: 10px;
+
+  --theme-deso-color: #0e0e23;
+  --theme-metamask-color: #a75503;
+  --theme-phantom-color: black;
+
+  --theme-google-color: white;
+  --theme-microsoft-color: whitesmoke;
+
+  --stroke-color: black;
+
+  --always-white-color: #ffffff;
+  --always-black-color: black;
+
+  --xs-screen-size: 375px; /* Phones */
+  --s-screen-size: 700px; /* Tablets and phones */
+  --m-screen-size: 1026px; /* Large tablets */
+  --l-screen-size: 1200px; /* Laptops */
+  --xl-screen-size: 1535px; /* Desktops */
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  color-scheme: dark;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
 @media (prefers-color-scheme: dark) {

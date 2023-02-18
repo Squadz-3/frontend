@@ -1,0 +1,229 @@
+/* ===== Title ===== */
+.title {
+  font-family: var(--text-header-font);
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.description {
+  width: 100%;
+  text-align: center;
+  font-family: var(--text-primary-font);
+  margin-top: 1vh;
+}
+
+/* ===== Input ===== */
+.input {
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  height: 6vh;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 1px solid var(--always-white-color);
+  font-family: var(--text-primary-font);
+  transition: 0.2s ease;
+}
+.input:focus {
+  border: 1px solid var(--accent-color);
+}
+.textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  padding-left: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-top: 5px;
+  border: 1px solid var(--always-white-color);
+  font-family: var(--text-primary-font);
+}
+.textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+
+/* ===== Buttons ===== */
+
+.nextButton {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  color: var(--always-white-color);
+  padding: var(--button-padding);
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  user-select: none;
+}
+.backButton {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  color: var(--always-white-color);
+  padding: var(--button-padding);
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+}
+
+/* ===== Upload image ===== */
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.image {
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.upload {
+  width: 100%;
+  height: 15vh;
+  border: 1px dashed white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+}
+.banner {
+  margin-top: 1vh;
+  width: 410px;
+  border-radius: 5px;
+  max-height: 210px;
+  object-fit: cover;
+}
+.banner[src=""] {
+  display: none;
+}
+
+/* ==== Gated ===== */
+.option {
+  padding: 7px;
+  outline: 1px solid var(--accent-color);
+  border-radius: 5px;
+  margin-top: 2vh;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+}
+
+.option:hover {
+  outline: 1px solid var(--second-accent-color);
+}
+.active {
+  padding: 7px;
+  outline: 1px solid var(--accent-color);
+  border-radius: 5px;
+  margin-top: 2vh;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  background-color: var(--background-primary-color);
+}
+.option h2 {
+  letter-spacing: 0.2vw;
+  font-family: var(--text-header-font);
+  line-height: 35px;
+}
+.active h2 {
+  letter-spacing: 0.2vw;
+  font-family: var(--text-header-font);
+  line-height: 35px;
+}
+.option p {
+  font-family: var(--text-primary-font);
+}
+.active p {
+  font-family: var(--text-primary-font);
+}
+.option span {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.active span {
+  display: inline-block;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.optionImage {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
+/* ===== Min Dao ===== */
+.minDao {
+  margin-top: 1vh;
+  font-family: var(--text-primary-font);
+  display: inline-block;
+}
+.minDaoText {
+  outline: none;
+  margin-left: 5px;
+  width: 50px;
+}
+.menu {
+  margin-left: 5px;
+  outline: none;
+}
+
+/* ===== NFT ===== */
+.NFTList {
+  list-style: none;
+  width: 500px;
+  height: 110px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
+.NFTList li {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px;
+  width: 80px;
+  margin-top: 5px;
+  height: 80px;
+  text-align: center;
+  background-color: var(--always-white-color);
+  color: var(--always-black-color);
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.imageNFT img {
+  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+.textNFT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* ===== Error ===== */
+.error {
+  text-align: center;
+  color: var(--text-negative-color);
+  margin-top: 10px;
+}
