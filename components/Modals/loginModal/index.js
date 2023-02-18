@@ -80,7 +80,11 @@ export default function LoginModal() {
 
     google.accounts.id.renderButton(
       document.getElementById("loginWithGoogle"),
-      { theme: "outline", size: "large" }
+      {
+        theme: "outline",
+        size: "large",
+        client_id: process.env.NEXT_PUBLIC_GOOGLE_ID,
+      }
     );
   });
 

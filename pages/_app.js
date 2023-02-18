@@ -109,10 +109,6 @@ function Squadz({ Component, pageProps }) {
         />
         <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
       </Head>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-YFMKYBDJBC"
-        async
-      />
 
       {loading && (
         <div className="loading">
