@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   const query = [];
   let options = {};
 
-  const body = JSON.parse(req.body);
+  const body = req.body;
 
   if (body.searchTerm) {
     options = {
