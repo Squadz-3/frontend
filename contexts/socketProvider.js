@@ -21,7 +21,9 @@ export function SocketProvider({ id, children }) {
 
     const dev = process.env.NODE_ENV !== "production";
 
-    const server = dev ? "http://localhost:3001/" : "http://localhost:3001/";
+    const server = dev
+      ? "http://localhost:3001/"
+      : process.env.NEXT_PUBLIC_SOCKET_SERVER;
     //Set up a new client with the server
 
     if (roomName) {
