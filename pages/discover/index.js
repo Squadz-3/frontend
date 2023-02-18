@@ -42,10 +42,6 @@ export default function Discover({ data }) {
     };
     const response = await fetch(`/api/getHotSquadz/`, {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json charset=UTF-8",
-      },
       body: JSON.stringify(body),
     });
     const data = await response.json();
@@ -257,14 +253,10 @@ export async function getServerSideProps({ query, res }) {
   const desc = query.desc;
   const sort = query.sort;
   const gate = query.gate;
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
 
   const dev = process.env.NODE_ENV !== "production";
 
-  const server = dev ? "https://squadz.in" : "https://squadz.in";
+  const server = dev ? "http://localhost:3000/" : "https://squadz.in";
   // Fetch data from external API
   const body = {
     searchTerm: search,
