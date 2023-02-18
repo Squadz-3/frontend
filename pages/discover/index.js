@@ -269,7 +269,7 @@ export async function getServerSideProps({ query, res }) {
   };
   const response = await fetch(`${server}/api/getHotSquadz`, {
     method: "POST",
-    body: JSON.stringify(body),
+    body: body,
   });
 
   const data = await response.json();

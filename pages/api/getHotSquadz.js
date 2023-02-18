@@ -53,11 +53,14 @@ export default async function handler(req, res) {
   } else {
     query.push({ $sort: { hot: -1, timestamp: -1 } }, { $limit: 10 });
   }
+  try {
+    const hot = await db.collection("_squadz").aggregate(query).toArray();
 
-  const hot = await db.collection("_squadz").aggregate(query).toArray();
-
-  const final = {
-    hot: hot,
-  };
-  res.status(200).send(final);
+    const final = {
+      hot: hot,
+    };
+    res.status(200).send(final);
+  } catch (error) {
+    res.status(200).send(error);
+  }
 }

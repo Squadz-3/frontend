@@ -365,7 +365,5 @@ export async function getServerSideProps({ res, query }) {
   );
   const messages = await message.json();
 
-  res.setHeader("Cache-Control", "public, max-age=7200");
-
   return { props: { data, messages } };
 }
