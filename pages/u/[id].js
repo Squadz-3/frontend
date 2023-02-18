@@ -355,7 +355,7 @@ export async function getServerSideProps({ res, query }) {
 
   const dev = process.env.NODE_ENV !== "production";
 
-  const server = dev ? "http://localhost:3000" : "http://localhost:3000";
+  const server = dev ? "http://localhost:3000" : "https://squadz.in/";
 
   const response = await fetch(`${server}/api/getSquadInfo?id=${url}`);
   const data = await response.json();
