@@ -274,9 +274,12 @@ export async function getServerSideProps({ query }) {
     },
     body: JSON.stringify(body),
   });
+  if (response) {
+    const data = await response.json();
 
-  const data = await response.json();
-
-  // Pass data to the page via props
-  return { props: { data } };
+    // Pass data to the page via props
+    return { props: { data } };
+  } else {
+    return { props: {} };
+  }
 }
