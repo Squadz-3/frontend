@@ -82,19 +82,23 @@ export default function SignupModal() {
   }
 
   useEffect(() => {
-    const google = window.google;
-    /* global google */
-    google.accounts.id.initialize({
-      client_id: process.env.NEXT_PUBLIC_GOOGLE_ID,
-      ux_mode: process.env.NEXT_PUBLIC_GOOGLE_UX_MODE,
-      scope: process.env.NEXT_PUBLIC_GOOGLE_SCOPE,
-      callback: handleCallbackResponse,
-    });
+    try {
+      const google = window.google;
+      /* global google */
+      google.accounts.id.initialize({
+        client_id: process.env.NEXT_PUBLIC_GOOGLE_ID,
+        ux_mode: process.env.NEXT_PUBLIC_GOOGLE_UX_MODE,
+        scope: process.env.NEXT_PUBLIC_GOOGLE_SCOPE,
+        callback: handleCallbackResponse,
+      });
 
-    google.accounts.id.renderButton(
-      document.getElementById("signupWithGoogle"),
-      { theme: "outline", size: "large" }
-    );
+      google.accounts.id.renderButton(
+        document.getElementById("signupWithGoogle"),
+        { theme: "outline", size: "large" }
+      );
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   return (

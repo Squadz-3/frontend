@@ -68,23 +68,27 @@ export default function LoginModal() {
   }
 
   useEffect(() => {
+    try {
+      const google = window.google;
+
+      google.accounts.id.initialize({
+        client_id: process.env.NEXT_PUBLIC_GOOGLE_ID,
+        ux_mode: process.env.NEXT_PUBLIC_GOOGLE_UX_MODE,
+        scope: process.env.NEXT_PUBLIC_GOOGLE_SCOPE,
+        callback: handleCallbackResponse,
+      });
+
+      google.accounts.id.renderButton(
+        document.getElementById("loginWithGoogle"),
+        {
+          theme: "outline",
+          size: "large",
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
     /* global google */
-    const google = window.google;
-
-    google.accounts.id.initialize({
-      client_id: process.env.NEXT_PUBLIC_GOOGLE_ID,
-      ux_mode: process.env.NEXT_PUBLIC_GOOGLE_UX_MODE,
-      scope: process.env.NEXT_PUBLIC_GOOGLE_SCOPE,
-      callback: handleCallbackResponse,
-    });
-
-    google.accounts.id.renderButton(
-      document.getElementById("loginWithGoogle"),
-      {
-        theme: "outline",
-        size: "large",
-      }
-    );
   });
 
   return (

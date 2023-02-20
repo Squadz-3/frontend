@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       },
       {
         $sort: {
-          timestamp: 1,
+          timestamp: -1,
         },
       },
       {
@@ -36,5 +36,5 @@ export default async function handler(req, res) {
       },
     ])
     .toArray();
-  res.status(200).send(result);
+  res.status(200).send(result.reverse());
 }

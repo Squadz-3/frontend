@@ -154,7 +154,7 @@ export default function Channels() {
       {value &&
         value?.channels?.map(function (data, index) {
           return (
-            <div key={data.name}>
+            <div key={data.name + index}>
               <h2 className={style.channel}>{data.name}</h2>
               {isAdmin && (
                 <Image

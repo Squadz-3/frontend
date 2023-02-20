@@ -25,24 +25,6 @@ export default function Squad({ data, messages }) {
 
   const socket = useSocket();
 
-  const placeHolderOptions = [
-    "I think therefore I am.",
-    "I destroy my enemies when I make them my friends. ",
-    "Do not live the same year 75 times and call it a life.",
-    "You cannot save people, you can just love them.",
-    "It was not raining when Noah built the ark.",
-    "Take your dreams seriously.",
-    "There is no way to happiness. Happiness is the way.",
-    "You will succeed because most people are lazy.",
-    "Genius is 1% inspiration, 99% perspiration.",
-    "You must be the change you wish to see in the world.",
-    "Do it with passion, or not at all.",
-    "The grass is greener where you water it.",
-    "Sometimes you win, sometimes you learn.",
-    "I never dream of success. I worked for it.",
-    "Avoiding failure is to avoid progress.",
-  ];
-
   useEffect(() => {
     if (data) {
       if (
@@ -102,8 +84,10 @@ export default function Squad({ data, messages }) {
   }, [message]);
 
   useEffect(() => {
+    console.log("Workin", socket);
     if (socket) {
       socket.on("newIncomingMessage", (msg) => {
+        console.log(msg);
         if (
           msg.channel == router.query.channel &&
           msg.sub == router.query.sub
@@ -298,11 +282,7 @@ export default function Squad({ data, messages }) {
             </button>
 
             <input
-              placeholder={
-                placeHolderOptions[
-                  Math.floor(Math.random() * placeHolderOptions.length)
-                ]
-              }
+              placeholder="Write something wonderful"
               id="messageInput"
               onKeyPress={(e) => {
                 if (e.key === "Enter") {

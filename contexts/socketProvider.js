@@ -23,13 +23,16 @@ export function SocketProvider({ id, children }) {
 
     const server = dev
       ? "http://localhost:3001/"
-      : process.env.NEXT_PUBLIC_SOCKET_SERVER;
+      : "https://squadz.spatiumstories.xyz/";
     //Set up a new client with the server
 
     if (roomName) {
       try {
         const newSocket = io(server, {
           query: `chat=${roomName}`,
+          path: "/socket.io",
+          transports: ["websocket", "polling"],
+          secure: true,
         });
         setSocket(newSocket);
         return () => newSocket.close();
