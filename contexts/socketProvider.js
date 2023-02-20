@@ -22,8 +22,8 @@ export function SocketProvider({ id, children }) {
     const dev = process.env.NODE_ENV !== "production";
 
     const server = dev
-      ? "http://localhost:3001/"
-      : "https://squadz.spatiumstories.xyz/";
+      ? "https://squad-backend.onrender.com"
+      : "https://squad-backend.onrender.com";
     //Set up a new client with the server
 
     if (roomName) {
